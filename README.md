@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 ## Visualization
 
-The simulation framework provides various visualizations to understand the simulation outcomes using `matplotlib`. Here's a summary:
+The simulation framework provides various visualizations to understand the simulation outcomes using `matplotlib`:
 
 - **Health Factor Over Time**: Visualize the risk profile of a position.
 - **Rewards Over Time**: Insight into the earning potential of staking strategies.
