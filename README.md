@@ -15,9 +15,8 @@
 3. Open desired `.ipynb` file, edit, and save.
 4. To stop Jupyter Notebook, press `Ctrl + C` in the terminal.
 
+# Simulation Functions
 
-# Leverage Yield Farming Strategy
- 
 The model is to simulate:
 1. Depositing `1 wsteth` to get `crvusd` on a given date
 `create_loan(date)`
