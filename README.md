@@ -10,7 +10,7 @@ usdc_amount = swapCrvUsdToUsdc(date, loan_amount)
 3. Compute the health factor of that wsteth position
 compute_health_factor_over_time(date, 1, usdc_amount)
 
-4. Stake the usdc in the d2d/usdc pool on aura #quick timestamp to date conversion
+4. Stake the usdc in the d2d/usdc pool on aura #TODO: quick timestamp to date conversion
 stakeOnAura(timestamp, usdc_amount)
 
 5. Simulate the impermanent health of that position
@@ -24,7 +24,7 @@ rewards_per_date(date)
 simulate_reinvest(date, 1, 500)
 
 8. Simulate reinvesting rewards up to the day if health factor goes down 15%
-simulate_reinvestV2("2023-06-23", 1, usdc_amount,rewards)
+simulate_reinvestV2(startDate, 1, usdc_amount,rewards)
 
 9. Plot profitability of the wsteth position
 plot_wsteth_profitability_usd2(startDate, EndDate)
