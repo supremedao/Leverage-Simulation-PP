@@ -1,4 +1,22 @@
-# Leverage-Simulation-PP
+## Prerequisites
+
+- Python 3.x
+- pip
+
+## Installation
+
+1. Clone the repo: `git clone [repository-url]`
+2. Install packages: `pip install -r requirements.txt`
+
+## Running Jupyter Notebook
+
+1. Go to project directory: `cd /path/to/project/directory`
+2. Start Jupyter Notebook: `jupyter notebook`
+3. Open desired `.ipynb` file, edit, and save.
+4. To stop Jupyter Notebook, press `Ctrl + C` in the terminal.
+
+
+# Leverage Yield Farming Strategy
  
 The model is to simulate:
 1. Depositing 1 wsteth to get crvusd on a given date
