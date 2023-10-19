@@ -1,53 +1,52 @@
-## Prerequisites
+# SupremeDAO Leveraged Yield Farming Strategy Simulation
 
-- Python 3.x
-- pip
+This repository contains the first milestone of SupremeDAO Leveraged Yield Farmig Stategy Simulation project [proposed by SupremeDAO to PowerPool](https://gov.powerpool.finance/t/approved-grant-to-daosim-systems-for-the-implementation-of-poweragent-in-their-new-project-supremedao/1946). 
+
+## Table of Contents
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Features](#features)
+4. [Visualization](#visualization)
+5. [License](#license)
 
 ## Installation
 
-1. Clone the repo: `git clone [repository-url]`
-2. Install packages: `pip install -r requirements.txt`
+Clone the repository and install the required packages:
 
-## Running Jupyter Notebook
+```bash
+git clone https://github.com/supremedao/Leverage-Simulation-PP.git
+cd Leverage-Simulation-PP
+pip install -r requirements.txt
+```
 
-1. Go to project directory: `cd /path/to/project/directory`
-2. Start Jupyter Notebook: `jupyter notebook`
-3. Open desired `.ipynb` file, edit, and save.
+## Usage
+
+1. Start Jupyter Notebook: `jupyter notebook`
+2. Open desired `simulation_model.ipynb`
 4. To stop Jupyter Notebook, press `Ctrl + C` in the terminal.
 
-# Simulation Functions
+## Features
 
-The model is to simulate:
-1. Depositing `1 wsteth` to get `crvusd` on a given date
-`create_loan(date)`
+- **Loan Creation**: Model the process of creating a `crvUSD` loan by depositing collateral and borrowing assets.
+- **Asset Swapping**: Simulate swapping of `crvUSD` to `USDC` scenarios to provide liquidity on Balancer.
+- **Staking**: Evaluate the process of staking assets on `Aura` to earn rewards over time.
+- **Health Factor Analysis**: Compute and analyze the health factor of `crvUSD` position over time, considering different market conditions.
+- **Reinvestment Strategies**: Simulate reinvestment strategies based on health factors and rewards.
+- **Impermanent Loss Calculation**: Understand and quantify the impermanent loss associated with providing liquidity.
+- **Profitability Analysis**: Analyze the profitability of positions, considering asset price changes, rewards, and impermanent loss.
+- **Visualization**: Visualize the outcomes of the simulations using Matplotlib for better understanding and analysis.
 
-2. Swap `crvusd` to `usdc` 
-`usdc_amount = swapCrvUsdToUsdc(date, loan_amount)`
+## Visualization
 
-3. Compute the health factor of that `wsteth` position
-`compute_health_factor_over_time(date, 1, usdc_amount)`
+The simulation framework provides various visualizations to understand the simulation outcomes using `matplotlib`. Here's a summary:
 
-4. Stake the `usdc` in the `d2d/usdc` pool on aura: 
-`stakeOnAura(timestamp, usdc_amount)`
+- **Health Factor Over Time**: Visualize the risk profile of a position.
+- **Rewards Over Time**: Insight into the earning potential of staking strategies.
+- **Profitability of wstETH Position**: Visualize the profitability with and without considering rewards.
+- **Impermanent Loss Over Time**: Visualize the impermanent loss when providing liquidity.
+- **Adjusted Profitability with Impermanent Loss**: Profitability of positions with rewards and impermanent loss considerations.
 
-5. Simulate the impermanent health of that position
-`plot_impermanent_loss_with_cleaned_dates_v2(usdc_amount,timestamp)`
-`IL_amount = calculate_impermanent_loss_v6(usdc_amount, EndDate)`
+## Visualization
 
-6. Calculate aura rewards for that positon 
-`rewards_per_date(date)`
-
-7. Simulate reinvesting x amount of usd if health factor goes down 15%
-simulate_reinvest(date, 1, 500)
-
-8. Simulate reinvesting rewards up to the day if health factor goes down 15%
-`simulate_reinvestV2(startDate, 1, usdc_amount,rewards)`
-
-9. Plot profitability of the `wsteth` position
-`plot_wsteth_profitability_usd2(startDate, EndDate)`
-
-10. Plot profitability of the wsteth position with rewards
-`plot_wsteth_profitability_usd_with_rewards(startDate, EndDate, rewards)`
-
-11. Plot profitability of the wsteth position with rewards minus impermanent loss
-`plot_wsteth_profitability_usd_with_rewards_and_final_impermanent_loss('startDate, EndDate, rewards, IL_Amount)`
+This project is licensed under the MIT License. See the `LICENSE.md` file for details.
