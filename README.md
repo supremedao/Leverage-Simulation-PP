@@ -47,6 +47,6 @@ The simulation framework provides various visualizations to understand the simul
 - **Impermanent Loss Over Time**: Visualize the impermanent loss when providing liquidity.
 - **Adjusted Profitability with Impermanent Loss**: Profitability of positions with rewards and impermanent loss considerations.
 
-## Visualization
+## License
 
 This project is licensed under the GNU v3 License. See the `LICENSE.md` file for details.
