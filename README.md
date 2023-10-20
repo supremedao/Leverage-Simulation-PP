@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ## Usage
 
 1. Start Jupyter Notebook: `jupyter notebook`
-2. Open desired `simulation_model.ipynb`
+2. Open `simulation_model.ipynb`
 4. To stop Jupyter Notebook, press `Ctrl + C` in the terminal.
 
 ## Features
